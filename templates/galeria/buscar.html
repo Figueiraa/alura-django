@@ -1,4 +1,4 @@
-{% extends 'mangashubbr/base.html' %}
+{% extends 'galeria/base.html' %}
 {% load static %}
 {% block content %}
             <section class="conteudo">
@@ -15,7 +15,7 @@
                         <li class="tags__tag">Planeta</li>
                     </ul>
                 </section>
-                <section class="mangashubbr">
+                <section class="galeria">
                     <div class="cards">
                         <h2 class="cards__titulo">Navegue pela galeria</h2>
                         <ul class="cards__lista">
@@ -24,7 +24,7 @@
                             <li class="card">
                                 <a href="{% url 'imagem' fotografia.id %}">
                                 {% if fotografia.foto == "" or fotografia.foto == null %}
-                                    <img class="card__imagem" src="{% static '/assets/imagens/mangashubbr/not-found.png'%}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/not-found.png'%}" alt="foto">
                                 {% else %}
                                     <img class="card__imagem" src="{{ fotografia.foto.url }}" alt="foto">
                                 {% endif %}
